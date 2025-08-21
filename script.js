@@ -1,20 +1,19 @@
 var index = 0;
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("myslides");
 
-function carousel () {
+  for (i = 0; i < x.length; i++) {``
+    x[i].style.display = "none";
+  }
 
-var i;
-var x=document.getElementsByClassName("myslides");
+  index++;
+  if (index > x.length) {
+    index = 1;
+  }
 
-for (i = 0; i < x.length; i++) {
-x[i].style.display= "none";
+  x[index - 1].style.display = "block";
+
+  setTimeout(carousel, 2000);
 }
-index++;
-if (i > x.length) {
-    index= 1;
-}
-x[index-1;].style.display="block";
-setTimeout (carousel,2000);
-
-}
-
-carousel ();
+carousel(); 
